@@ -13,10 +13,10 @@
         android:theme="@style/Theme.CollegeServices">
         <activity
             android:name=".SignupActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
