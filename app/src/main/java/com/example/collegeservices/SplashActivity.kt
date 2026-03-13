@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed( {
             var auth = FirebaseAuth.getInstance()
             if (auth.currentUser == null) {
-                var intent = Intent(this, LoginScreen::class.java)
+                var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
