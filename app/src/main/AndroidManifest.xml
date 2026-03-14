@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeServices">
         <activity
+            android:name=".BottomMenu"
+            android:exported="false" />
+        <activity
+            android:name=".BottomNavigation"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="true" />
         <activity
@@ -28,8 +34,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
