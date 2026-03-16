@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/home"
-    android:id="@+id/mobile_navigation">
+    <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:startDestination="@id/home"
+        android:id="@+id/mobile_navigation"
+    >
 
-    <fragment
-        android:id="@+id/home"
-        android:name="com.example.collegeservices.HomeFragment"
-        android:label="fragment_Home"
-        tools:layout="@layout/fragment_home"
-        />
-    <fragment
-        android:id="@+id/dashboard"
-        android:name="com.example.collegeservices.DashboardFragment"
-        android:label="fragment_Dashboard"
-        tools:layout="@layout/fragment_dashboard"
-        />
-    <fragment
-        android:id="@+id/profile"
-        android:name="com.example.collegeservices.ProfileFragment"
-        android:label="fragment_Profile"
-        tools:layout="@layout/fragment_profile"
-        />
-</navigation>
+        <fragment
+            android:id="@+id/home"
+            android:name="com.example.collegeservices.HomeFragment"
+            android:label="fragment_Home"
+            tools:layout="@layout/fragment_home"
+            />
+        <fragment
+            android:id="@+id/dashboard"
+            android:name="com.example.collegeservices.DashboardFragment"
+            android:label="fragment_Dashboard"
+            tools:layout="@layout/fragment_dashboard"
+            />
+        <fragment
+            android:id="@+id/profile"
+            android:name="com.example.collegeservices.ProfileFragment"
+            android:label="fragment_Profile"
+            tools:layout="@layout/fragment_profile"
+            />
+    </navigation>
+
