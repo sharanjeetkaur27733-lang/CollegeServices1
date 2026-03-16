@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeServices">
         <activity
+            android:name=".MobileNavigation"
+            android:exported="false" />
+        <activity
             android:name=".BottomMenu"
             android:exported="false" />
         <activity
