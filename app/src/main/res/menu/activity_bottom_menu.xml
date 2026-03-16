@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottomMenu">
+
+
+        <item
+            android:title="HOME"
+            android:id="@+id/HomeFragment"
+            android:icon="@drawable/ic_home"/>
+
+        <item
+            android:title="DASHBOARD"
+            android:id="@+id/DashboardFragment"
+            android:icon="@drawable/outline_content_paste_search_24"
+            />
+
+        <item
+            android:title="PROFILE"
+            android:id="@+id/ProfileFragment"
+            android:icon="@drawable/Profile"
+            />
+
+
+
+    </menu>
+
