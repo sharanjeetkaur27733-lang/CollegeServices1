@@ -105,6 +105,7 @@
         app:layout_constraintTop_toBottomOf="@id/feeCard" />
 
     <Button
+        android:id="@+id/historyBtn"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="30dp"

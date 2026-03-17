@@ -51,6 +51,7 @@
         <!-- Manage Students -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/studentsCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -83,6 +84,7 @@
         <!-- Manage Fees -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/feesCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -115,6 +117,7 @@
         <!-- Manage Bus -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/busCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -147,6 +150,7 @@
         <!-- Manage Complaints -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/complaintCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"

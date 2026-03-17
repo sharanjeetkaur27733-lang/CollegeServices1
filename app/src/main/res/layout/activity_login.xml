@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Cobalt">
+    android:background="@color/lightbluegradient">
 
     <!-- Login Title -->
 
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/etPassword"
         app:layout_constraintEnd_toEndOf="@id/etPassword"
@@ -97,10 +97,9 @@
         android:layout_height="55dp"
         android:text="Login"
         android:textColor="#FFFFFF"
-        android:backgroundTint="@color/blue"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:background="@color/material_dynamic_primary20"
+        android:background="@color/Cobalt"
         app:layout_constraintTop_toBottomOf="@id/txtForgot"
         app:layout_constraintStart_toStartOf="@id/etPassword"
         app:layout_constraintEnd_toEndOf="@id/etPassword"
@@ -114,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account?"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/txtAccount"

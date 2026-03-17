@@ -52,6 +52,7 @@
         <!-- Fees -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/feesCard"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_columnWeight="1"
@@ -86,6 +87,7 @@
         <!-- Bus Pass -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/busCard"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_columnWeight="1"
@@ -120,6 +122,7 @@
         <!-- Leave -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/leaveCard"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_columnWeight="1"
@@ -154,6 +157,7 @@
         <!-- Complaint -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/complaintCard"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_columnWeight="1"
@@ -188,6 +192,7 @@
         <!-- Notices -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/noticeCard"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_columnWeight="1"
@@ -222,6 +227,7 @@
         <!-- Events -->
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/eventsCard"
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_columnWeight="1"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
-    android:background="@color/Cobalt">
+    android:background="@color/lightbluegradient">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -25,7 +25,7 @@
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="33dp"/>
 
 
         <EditText
@@ -46,7 +46,7 @@
             android:textColorHint="@color/black"
             android:inputType="textPersonName"
             android:padding="10dp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/etEmail"
@@ -57,7 +57,7 @@
             android:textColorHint="@color/black"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/etPassword"
@@ -68,7 +68,7 @@
             android:textColorHint="@color/black"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:id="@+id/etConfirmPassword"
@@ -79,16 +79,17 @@
             android:background="@color/white"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/btnSignup"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Register"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textColor="#FFFFFF"
-            android:backgroundTint="@color/blue"/>
+            android:backgroundTint="@color/Cobalt"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/tvLogin"
@@ -96,8 +97,8 @@
             android:layout_height="wrap_content"
             android:text="Already have an account? Login"
             android:textSize="20dp"
-            android:textColor="@color/lightbluegradient"
-            android:layout_marginTop="20dp"/>
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 
