@@ -6,7 +6,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.collegeservices.R
-import com.example.collegeservices.SignupActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
