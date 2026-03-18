@@ -1,6 +1,6 @@
 package com.example.collegeservices
 
-import FeesFragment
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import android.widget.Toast
+import com.example.collegeservices.FeesFragment
+import com.example.collegeservices.BusFragment
+import com.example.collegeservices.LeaveFragment
+import com.example.collegeservices.ComplaintFragment
+import com.example.collegeservices.NoticesFragment
+import com.example.collegeservices.EventsFragment
 
 class DashboardFragment : Fragment() {
 
@@ -68,16 +74,3 @@ class DashboardFragment : Fragment() {
         return view
     }
 
-    // ✅ Toast function (clean code)
-    private fun showToast(msg: String) {
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
-    }
-
-    // 🔁 Fragment open function
-    private fun openFragment(fragment: Fragment) {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.frameLayout, fragment)
-            .addToBackStack(null) // 🔙 back enable
-            .commit()
-    }
-}

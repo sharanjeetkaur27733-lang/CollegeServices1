@@ -1,4 +1,4 @@
-package com.example.yourappname
+package com.example.collegeservices
 
 import android.content.Intent
 import android.os.Bundle
