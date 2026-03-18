@@ -19,4 +19,5 @@
     <color name="dimgrey">#696969</color>
     <color name="Cobalt">#3F51B5</color>
     <color name="hex">#673AB7</color>
+    <color name="bg_gradient">#0E1E49</color>
 </resources>

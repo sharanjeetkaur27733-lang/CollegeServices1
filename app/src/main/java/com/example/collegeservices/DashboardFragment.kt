@@ -1,5 +1,6 @@
 package com.example.collegeservices
 
+import FeesFragment
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,7 +25,7 @@ class DashboardFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
-        // Connect cards
+        // 🔗 Connect cards
         feesCard = view.findViewById(R.id.feesCard)
         busCard = view.findViewById(R.id.busCard)
         leaveCard = view.findViewById(R.id.leaveCard)
@@ -32,31 +33,51 @@ class DashboardFragment : Fragment() {
         noticeCard = view.findViewById(R.id.noticeCard)
         eventsCard = view.findViewById(R.id.eventsCard)
 
-        // Clicks
+        // 🎯 Click Listeners
+
         feesCard.setOnClickListener {
-            Toast.makeText(requireContext(), "Fees Clicked", Toast.LENGTH_SHORT).show()
+            showToast("Fees Clicked")
+            openFragment(FeesFragment())
         }
 
         busCard.setOnClickListener {
-            Toast.makeText(requireContext(), "Bus Clicked", Toast.LENGTH_SHORT).show()
+            showToast("Bus Clicked")
+            openFragment(BusFragment())
         }
 
         leaveCard.setOnClickListener {
-            Toast.makeText(requireContext(), "Leave Clicked", Toast.LENGTH_SHORT).show()
+            showToast("Leave Clicked")
+            openFragment(LeaveFragment())
         }
 
         complaintCard.setOnClickListener {
-            Toast.makeText(requireContext(), "Complaint Clicked", Toast.LENGTH_SHORT).show()
+            showToast("Complaint Clicked")
+            openFragment(ComplaintFragment())
         }
 
         noticeCard.setOnClickListener {
-            Toast.makeText(requireContext(), "Notices Clicked", Toast.LENGTH_SHORT).show()
+            showToast("Notice Clicked")
+            openFragment(NoticesFragment())
         }
 
         eventsCard.setOnClickListener {
-            Toast.makeText(requireContext(), "Events Clicked", Toast.LENGTH_SHORT).show()
+            showToast("Events Clicked")
+            openFragment(EventsFragment())
         }
 
         return view
+    }
+
+    // ✅ Toast function (clean code)
+    private fun showToast(msg: String) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
+    }
+
+    // 🔁 Fragment open function
+    private fun openFragment(fragment: Fragment) {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.frameLayout, fragment)
+            .addToBackStack(null) // 🔙 back enable
+            .commit()
     }
 }

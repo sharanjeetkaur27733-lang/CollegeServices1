@@ -45,7 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/topBar"
-        android:layout_above="@id/bottomNavigation"
         android:columnCount="2"
         android:padding="16dp">
 
@@ -263,11 +262,6 @@
 
     <!-- Bottom Navigation -->
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/activity_bottom_menu"/>
+
 
 </RelativeLayout>

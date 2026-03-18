@@ -1,50 +1,43 @@
-package com.example.collegeservices
+package com.example.yourappname
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.*
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.collegeservices.R
+import com.example.collegeservices.SignupActivity
+import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var email: EditText
-    lateinit var password: EditText
-    lateinit var loginBtn: Button
-    lateinit var signup: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        // 🔗 Connect XML
-        email = findViewById(R.id.etEmail)
-        password = findViewById(R.id.etPassword)
-        loginBtn = findViewById(R.id.btnLogin)
-        signup = findViewById(R.id.txtAccount)   // ✅ Correct ID
+        val email = findViewById<TextInputEditText>(R.id.etEmail)
+        val password = findViewById<TextInputEditText>(R.id.etPassword)
+        val loginBtn = findViewById<Button>(R.id.btnLogin)
+        val signupText = findViewById<TextView>(R.id.txtAccount)
 
-        // ✅ Login Button
+        // 👉 Login Button Click
         loginBtn.setOnClickListener {
-
             val userEmail = email.text.toString()
             val userPassword = password.text.toString()
 
             if (userEmail.isEmpty() || userPassword.isEmpty()) {
-                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
+                email.error = "Enter Email"
+                password.error = "Enter Password"
             } else {
-
-                Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-
-                // 👉 Open Dashboard Activity (NOT Fragment)
-                val intent = Intent(this, BottomNavigationActivity::class.java)
+                // 👉 yaha future me Firebase login lagayenge
+                // Abhi simple next screen open kara dete hain
+                val intent = Intent(this, SignupActivity::class.java)
                 startActivity(intent)
-                finish()
             }
         }
 
-        // ✅ Signup Text Click
-        signup.setOnClickListener {
+        // 👉 Signup Text Click
+        signupText.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
