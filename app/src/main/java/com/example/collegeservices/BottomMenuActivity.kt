@@ -21,17 +21,17 @@ class BottomMenuActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.home -> {
+                R.id.Home -> {
                     Toast.makeText(this, "Home Clicked", Toast.LENGTH_SHORT).show()
                     true
                 }
 
-                R.id.dashboard -> {
+                R.id.Dashboard -> {
                     Toast.makeText(this, "Dashboard Clicked", Toast.LENGTH_SHORT).show()
                     true
                 }
 
-                R.id.profile -> {
+                R.id.Profile -> {
                     Toast.makeText(this, "Profile Clicked", Toast.LENGTH_SHORT).show()
                     true
                 }

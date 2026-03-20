@@ -6,14 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
 import android.widget.Toast
-import com.example.collegeservices.FeesFragment
-import com.example.collegeservices.BusFragment
-import com.example.collegeservices.LeaveFragment
-import com.example.collegeservices.ComplaintFragment
-import com.example.collegeservices.NoticesFragment
-import com.example.collegeservices.EventsFragment
+import androidx.cardview.widget.CardView
 
 class DashboardFragment : Fragment() {
 
@@ -74,3 +68,13 @@ class DashboardFragment : Fragment() {
         return view
     }
 
+    fun showToast(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun openFragment(fragment: Fragment) {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.frameLayout, fragment)
+            .commit()
+    }
+}

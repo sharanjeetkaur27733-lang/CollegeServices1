@@ -1,5 +1,6 @@
 package com.example.collegeservices
 
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ class ChatAdapter(val list: ArrayList<Person>,val onClick: OnItemClickListener):
     ): ChatViewHolder {
 
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.activity_item_chat, parent, false)
+            .inflate(R.layout.fragment_item_chat, parent, false)
         return ChatViewHolder(view)
     }
 
@@ -26,8 +27,11 @@ class ChatAdapter(val list: ArrayList<Person>,val onClick: OnItemClickListener):
         val item = list[position]
 
         holder.name.text = item.name
-        holder.lastMessage.text = item.lastmessage
-        holder.time.text = item.time
+        holder.name.text = item.name
+        holder.name.text = item.name
+        holder.name.text = item.name
+        holder.name.text = item.name
+        holder.name.text = item.name
 
 
         holder.view.setOnClickListener {
@@ -35,7 +39,7 @@ class ChatAdapter(val list: ArrayList<Person>,val onClick: OnItemClickListener):
             onClick.onItemClick(position)
         }
 
-        holder.time.setOnClickListener {
+        holder.name.setOnClickListener {
             onClick.onTimeClick(position)
         }
     }
@@ -49,8 +53,8 @@ class ChatAdapter(val list: ArrayList<Person>,val onClick: OnItemClickListener):
     inner class ChatViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
         val name = view.findViewById<TextView>(R.id.name)
-        val lastMessage = view.findViewById<TextView>(R.id.lastMessage)
-        val time = view.findViewById<TextView>(R.id.time)
+
+
 
     }
 

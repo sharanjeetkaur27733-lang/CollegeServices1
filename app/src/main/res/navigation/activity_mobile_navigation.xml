@@ -7,19 +7,19 @@
     >
 
         <fragment
-            android:id="@+id/HomeFragement"
+            android:id="@+id/Home"
             android:name="com.example.collegeservices.HomeFragment"
             android:label="fragment_Home"
             tools:layout="@layout/fragment_home"
             />
         <fragment
-            android:id="@+id/DashboardFragement"
+            android:id="@+id/Dashboard"
             android:name="com.example.collegeservices.DashboardFragment"
             android:label="fragment_Dashboard"
             tools:layout="@layout/fragment_dashboard"
             />
         <fragment
-            android:id="@+id/ProfileFragement"
+            android:id="@+id/Profile"
             android:name="com.example.collegeservices.ProfileFragment"
             android:label="fragment_Profile"
             tools:layout="@layout/fragment_profile"

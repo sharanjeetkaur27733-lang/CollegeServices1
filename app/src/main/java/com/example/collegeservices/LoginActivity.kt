@@ -32,13 +32,4 @@ class LoginActivity : AppCompatActivity() {
                 // Abhi simple next screen open kara dete hain
                 val intent = Intent(this, SignupActivity::class.java)
                 startActivity(intent)
-            }
-        }
-
-        // 👉 Signup Text Click
-        signupText.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivity(intent)
-        }
-    }
-}
+            }}}}

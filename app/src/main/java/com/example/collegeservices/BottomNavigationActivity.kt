@@ -20,17 +20,17 @@ class BottomNavigationActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.home -> {
+                R.id.Home -> {
                     loadFragment(HomeFragment())   // 👈 agar hai
                     true
                 }
 
-                R.id.dashboard -> {
+                R.id.Dashboard -> {
                     loadFragment(DashboardFragment())
                     true
                 }
 
-                R.id.profile -> {
+                R.id.Profile -> {
                     loadFragment(ProfileFragment())
                     true
                 }
