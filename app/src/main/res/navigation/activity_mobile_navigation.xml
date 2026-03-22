@@ -2,7 +2,7 @@
     <navigation xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        app:startDestination="@id/home"
+        app:startDestination="@id/Home"
         android:id="@+id/mobile_navigation"
     >
 
@@ -22,7 +22,43 @@
             android:id="@+id/Profile"
             android:name="com.example.collegeservices.ProfileFragment"
             android:label="fragment_Profile"
-            tools:layout="@layout/fragment_profile"
-            />
+            tools:layout="@layout/fragment_profile"/>
+
+        <fragment
+            android:id="@+id/feesFragment"
+            android:name="com.example.collegeservices.FeesFragment"
+            android:label="fragment_Fees"
+            tools:layout="@layout/fragment_fees"/>
+
+        <fragment
+            android:id="@+id/busFragment"
+            android:name="com.example.collegeservices.BusFragment"
+            android:label="fragment_bus"
+            tools:layout="@layout/fragment_bus"/>
+
+        <fragment
+            android:id="@+id/leaveFragment"
+            android:name="com.example.collegeservices.LeaveFragment"
+            android:label="fragment_leave"
+            tools:layout="@layout/fragment_leave"/>
+
+        <fragment
+            android:id="@+id/complaintFragment"
+            android:name="com.example.collegeservices.ComplaintFragment"
+            android:label="fragment_complaint"
+            tools:layout="@layout/fragment_complaint"/>
+
+        <fragment
+            android:id="@+id/noticesFragment"
+            android:name="com.example.collegeservices.NoticesFragment"
+            android:label="fragment_notices"
+            tools:layout="@layout/fragment_notices"/>
+
+          <fragment
+              android:id="@+id/eventsFragment"
+              android:name="com.example.collegeservices.EventsFragment"
+              android:label="fragment_events"
+              tools:layout="@layout/fragment_events"/>
+
     </navigation>
 

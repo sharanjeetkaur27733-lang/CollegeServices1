@@ -34,6 +34,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures.viewBinding = true
 
 }
 
@@ -56,6 +57,8 @@ dependencies {
 
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-database")
+
+    implementation("io.appwrite:sdk-for-android:12.0.0")
 }
 
 

@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F2F2F2">
 
-    <!-- Top Bar -->
-
+    <!-- 🔵 Top Bar -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -15,32 +14,41 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_back" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- 🔥 Row: Back + Dashboard -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Welcome Text -->
         <TextView
-            android:text="Wellcome Students 👋"
+            android:text="Welcome Students 👋"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
-    <!-- Services Grid -->
-
+    <!-- 🧩 Services Grid -->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +57,6 @@
         android:padding="16dp">
 
         <!-- Fees -->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/feesCard"
             android:layout_width="0dp"
@@ -78,13 +85,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Bus Pass -->
-
+        <!-- Bus -->
         <androidx.cardview.widget.CardView
             android:id="@+id/busCard"
             android:layout_width="0dp"
@@ -113,13 +118,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <!-- Leave -->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/leaveCard"
             android:layout_width="0dp"
@@ -148,13 +151,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <!-- Complaint -->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/complaintCard"
             android:layout_width="0dp"
@@ -180,16 +181,15 @@
                     android:text="Submit Complaint"
                     android:textStyle="bold"
                     android:textSize="16sp"
+                    android:gravity="center"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <!-- Notices -->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/noticeCard"
             android:layout_width="0dp"
@@ -218,13 +218,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <!-- Events -->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/eventsCard"
             android:layout_width="0dp"
@@ -253,15 +251,10 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
-
-    <!-- Bottom Navigation -->
-
-
 
 </RelativeLayout>

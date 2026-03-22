@@ -15,6 +15,7 @@ class LeaveFragment : Fragment() {
     lateinit var fromDate: EditText
     lateinit var toDate: EditText
     lateinit var submitBtn: Button
+    lateinit var backArrow: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +28,12 @@ class LeaveFragment : Fragment() {
         fromDate = view.findViewById(R.id.fromDate)
         toDate = view.findViewById(R.id.toDate)
         submitBtn = view.findViewById(R.id.submitLeave)
+        backArrow = view.findViewById(R.id.backArrow)
+
+        // 🔙 Back Arrow
+        backArrow.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+        }
 
         fromDate.setOnClickListener {
             showDatePicker(fromDate)

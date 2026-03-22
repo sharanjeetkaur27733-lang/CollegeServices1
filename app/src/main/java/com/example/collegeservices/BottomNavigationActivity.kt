@@ -40,10 +40,9 @@ class BottomNavigationActivity : AppCompatActivity() {
         }
     }
 
-    // 🔁 Fragment change function
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.frameLayout, fragment)
+            .replace(R.id.nav_host_fragment, fragment)
             .commit()
     }
 }

@@ -1,13 +1,13 @@
 package com.example.collegeservices
 
-
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class DashboardFragment : Fragment() {
 
@@ -25,7 +25,7 @@ class DashboardFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
-        // 🔗 Connect cards
+        // Connect cards
         feesCard = view.findViewById(R.id.feesCard)
         busCard = view.findViewById(R.id.busCard)
         leaveCard = view.findViewById(R.id.leaveCard)
@@ -33,48 +33,37 @@ class DashboardFragment : Fragment() {
         noticeCard = view.findViewById(R.id.noticeCard)
         eventsCard = view.findViewById(R.id.eventsCard)
 
-        // 🎯 Click Listeners
-
+        // Clicks
         feesCard.setOnClickListener {
-            showToast("Fees Clicked")
-            openFragment(FeesFragment())
+            Toast.makeText(requireContext(), "Fees Clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.feesFragment)
         }
 
         busCard.setOnClickListener {
-            showToast("Bus Clicked")
-            openFragment(BusFragment())
+            Toast.makeText(requireContext(), "Bus Clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.busFragment)
         }
 
         leaveCard.setOnClickListener {
-            showToast("Leave Clicked")
-            openFragment(LeaveFragment())
+            Toast.makeText(requireContext(), "Leave Clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.leaveFragment)
         }
 
         complaintCard.setOnClickListener {
-            showToast("Complaint Clicked")
-            openFragment(ComplaintFragment())
+            Toast.makeText(requireContext(), "Complaint Clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.complaintFragment)
         }
 
         noticeCard.setOnClickListener {
-            showToast("Notice Clicked")
-            openFragment(NoticesFragment())
+            Toast.makeText(requireContext(), "Notices Clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.noticesFragment)
         }
 
         eventsCard.setOnClickListener {
-            showToast("Events Clicked")
-            openFragment(EventsFragment())
+            Toast.makeText(requireContext(), "Events Clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.eventsFragment)
         }
 
         return view
-    }
-
-    fun showToast(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-    }
-
-    fun openFragment(fragment: Fragment) {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.frameLayout, fragment)
-            .commit()
     }
 }

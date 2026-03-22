@@ -20,4 +20,5 @@
     <color name="Cobalt">#3F51B5</color>
     <color name="hex">#673AB7</color>
     <color name="bg_gradient">#0E1E49</color>
+    <color name="bg_light">#F5F5F5</color>
 </resources>
