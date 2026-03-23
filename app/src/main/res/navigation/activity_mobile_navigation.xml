@@ -59,6 +59,12 @@
               android:name="com.example.collegeservices.EventsFragment"
               android:label="fragment_events"
               tools:layout="@layout/fragment_events"/>
+         <fragment
+              android:id="@+id/AdminFragmentadminFragment"
+              android:name="com.example.collegeservices.AdminFragment"
+              android:label="AdminFragment" />
 
-    </navigation>
+
+
+</navigation>
 

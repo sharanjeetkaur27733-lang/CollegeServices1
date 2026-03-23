@@ -16,4 +16,10 @@
         android:icon="@drawable/pro"
         android:title="Profile"/>
 
+    <item
+        android:id="@+id/AdminFragmentadminFragment"
+        android:icon="@drawable/adddmin"
+        android:title="Admin"/>
+
+
 </menu>

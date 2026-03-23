@@ -7,7 +7,6 @@
     android:background="#F4F6FB">
 
     <!-- Header -->
-
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -24,8 +23,7 @@
             android:id="@+id/backArrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_back"
-            />
+            android:src="@drawable/ic_back"/>
 
         <TextView
             android:text="Notices"
@@ -38,9 +36,9 @@
 
     </LinearLayout>
 
-    <!-- Notice Card -->
-
+    <!-- ✅ NOTICE CARD (ID LAGYA HOYA) -->
     <LinearLayout
+        android:id="@+id/noticeCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"

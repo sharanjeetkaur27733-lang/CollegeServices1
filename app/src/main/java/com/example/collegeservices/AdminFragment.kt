@@ -22,6 +22,7 @@ class AdminFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_admin, container, false)
 
+
         // Connect cards
         studentsCard = view.findViewById(R.id.studentsCard)
         feesCard = view.findViewById(R.id.feesCard)

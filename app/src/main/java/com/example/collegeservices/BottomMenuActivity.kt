@@ -15,6 +15,7 @@ class BottomMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_bottom_navigation)
+
         bottomNav = findViewById(R.id.bottom_nav)
 
         bottomNav.setOnItemSelectedListener {
@@ -35,6 +36,12 @@ class BottomMenuActivity : AppCompatActivity() {
                     Toast.makeText(this, "Profile Clicked", Toast.LENGTH_SHORT).show()
                     true
                 }
+
+                R.id.AdminFragmentadminFragment -> {
+                    Toast.makeText(this, "Admin Clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
 
                 else -> false
             }
