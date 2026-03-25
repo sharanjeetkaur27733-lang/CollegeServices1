@@ -17,7 +17,7 @@
         android:title="Profile"/>
 
     <item
-        android:id="@+id/AdminFragmentadminFragment"
+        android:id="@+id/AdminfragmentadminFragment"
         android:icon="@drawable/adddmin"
         android:title="Admin"/>
 
