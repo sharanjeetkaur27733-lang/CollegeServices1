@@ -35,7 +35,7 @@ class BottomNavigationActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.AdminFragmentadminFragment -> {
+                R.id.AdminfragmentadminFragment -> {
                     loadFragment(AdminFragment())
                     true
                 }

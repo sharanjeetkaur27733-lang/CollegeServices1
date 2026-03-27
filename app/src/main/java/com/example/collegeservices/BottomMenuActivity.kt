@@ -37,7 +37,7 @@ class BottomMenuActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.AdminFragmentadminFragment -> {
+                R.id.AdminfragmentadminFragment -> {
                     Toast.makeText(this, "Admin Clicked", Toast.LENGTH_SHORT).show()
                     true
                 }

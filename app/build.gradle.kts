@@ -58,6 +58,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-database")
 
+
     implementation("io.appwrite:sdk-for-android:12.0.0")
 }
 

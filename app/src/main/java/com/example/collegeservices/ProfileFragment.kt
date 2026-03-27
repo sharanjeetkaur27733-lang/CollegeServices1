@@ -1,56 +1,67 @@
 package com.example.collegeservices
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.*
+import android.widget.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 
 class ProfileFragment : Fragment() {
 
     private lateinit var name: TextView
-    private lateinit var email: TextView
+    private lateinit var userClass: TextView
     private lateinit var rollNo: TextView
-    private lateinit var year: TextView
+    private lateinit var email: TextView
     private lateinit var editBtn: Button
+    private lateinit var logoutBtn: Button
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-        name = view.findViewById(R.id.name)
-        email = view.findViewById(R.id.email)
-        rollNo = view.findViewById(R.id.rollNo)
-        year = view.findViewById(R.id.year)
-        editBtn = view.findViewById(R.id.editBtn)
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance().reference
 
-        // Listen for results from EditProfileFragment
-        parentFragmentManager.setFragmentResultListener("editProfile", viewLifecycleOwner) { _, bundle ->
-            val newName = bundle.getString("name")
-            val newEmail = bundle.getString("email")
-            if (!newName.isNullOrEmpty()) name.text = newName
-            if (!newEmail.isNullOrEmpty()) email.text = newEmail
-        }
+        name = view.findViewById(R.id.name)
+        userClass = view.findViewById(R.id.course)
+        rollNo = view.findViewById(R.id.rollNo)
+        email = view.findViewById(R.id.email)
+        editBtn = view.findViewById(R.id.editBtn)
+        logoutBtn = view.findViewById(R.id.btnLogout)
+
+        loadUserData()
 
         editBtn.setOnClickListener {
-            // Pass current values to EditProfileFragment using arguments
-            val editFragment = EditProfileFragment().apply {
-                arguments = Bundle().apply {
-                    putString("name", name.text.toString())
-                    putString("email", email.text.toString())
-                }
-            }
-
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, editFragment)
+                .replace(R.id.nav_host_fragment, EditProfileFragment())
                 .addToBackStack(null)
                 .commit()
         }
 
+        logoutBtn.setOnClickListener {
+            auth.signOut()
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            requireActivity().finish()
+        }
+
         return view
+    }
+
+    private fun loadUserData() {
+        val userId = auth.currentUser?.uid ?: return
+        database.child("users").child(userId)
+            .get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    name.text = it.child("name").value?.toString() ?: ""
+                    userClass.text = it.child("class").value?.toString() ?: ""
+                    rollNo.text = it.child("rollNo").value?.toString() ?: ""
+                    email.text = it.child("email").value?.toString() ?: ""
+                }
+            }
     }
 }
