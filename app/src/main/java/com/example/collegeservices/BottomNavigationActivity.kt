@@ -2,7 +2,8 @@ package com.example.collegeservices
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BottomNavigationActivity : AppCompatActivity() {
@@ -13,42 +14,16 @@ class BottomNavigationActivity : AppCompatActivity() {
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
-        // ✅ Default screen (Dashboard)
-        loadFragment(DashboardFragment())
+        // 1. NavHostFragment ko find karein (Ye wahi hai jo activity_bottom_navigation.xml mein hai)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-        bottomNav.setOnItemSelectedListener {
+        // 2. NavController nikaalein
+        val navController = navHostFragment.navController
 
-            when (it.itemId) {
-
-                R.id.Home -> {
-                    loadFragment(HomeFragment())   // 👈 agar hai
-                    true
-                }
-
-                R.id.Dashboard -> {
-                    loadFragment(DashboardFragment())
-                    true
-                }
-
-                R.id.Profile -> {
-                    loadFragment(ProfileFragment())
-                    true
-                }
-
-                R.id.AdminfragmentadminFragment -> {
-                    loadFragment(AdminFragment())
-                    true
-                }
-
-
-                else -> false
-            }
-        }
-    }
-
-    private fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.nav_host_fragment, fragment)
-            .commit()
+        // 3. BottomNav ko NavController ke saath jod dein
+        // Ab aapko manually fragment load karne ki zarurat nahi hai!
+        // Ye line khud check karegi ki click hone par kaunsa fragment dikhana hai.
+        bottomNav.setupWithNavController(navController)
     }
 }
